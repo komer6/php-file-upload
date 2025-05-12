@@ -1,0 +1,38 @@
+==============================
+PHP File Upload System (Simple)
+==============================
+
+How it Works:
+-------------
+1. The user opens "index.php" in the browser.
+2. The form in "index.php" lets the user select a file to upload.
+3. When the form is submitted:
+    - The file is sent to "upload.php" using POST method.
+    - "upload.php" checks:
+        a. If the "uploads" folder exists (creates if not).
+        b. If the file already exists (prevents overwrite).
+        c. If the file type is allowed (jpg, png, jpeg, gif, pdf).
+        d. If the file size is smaller than 5MB.
+4. If all checks pass:
+    - The file is moved from temporary storage to the "uploads/" folder.
+    - A success message is shown.
+5. If any check fails:
+    - An error message is shown.
+
+Folder Structure:
+-----------------
+file_upload_project/
+ ├── index.php        --> The upload form page
+ ├── upload.php       --> The file upload handling script
+ ├── uploads/         --> Where uploaded files are saved
+ └── readme.txt       --> This explanation file
+
+Notes:
+------
+- Only JPG, JPEG, PNG, GIF, and PDF files are allowed.
+- Maximum file size is 5MB.
+- You can customize allowed file types and file size inside "upload.php".
+- Always keep file uploads secure by validating files properly.
+- If you change max file size in PHP, update "php.ini" settings too.
+
+Enjoy uploading files! 🚀
